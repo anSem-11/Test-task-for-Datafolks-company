@@ -1,0 +1,361 @@
+@font-face {
+    font-family: 'DINpro';
+    src: url(../fonts/DINPro.woff) format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINpro';
+    src: url(../fonts/DINPro-Medium.woff) format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINpro';
+    src: url(../fonts/DINPro-Bold.woff) format('woff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Обнуление */
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'DINpro', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1700;
+    padding: 0 30px;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #344258;
+    font-size: 46px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    padding-bottom: 75px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Header */
+
+.header {
+    max-width: 1138px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.text {
+    color: #08172d;
+    margin-bottom: 25px;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+/* Projects */
+
+.projects__row {
+    max-width: 1494px;
+    margin: 0 auto;
+    display: flex;
+    overflow: auto;
+}
+
+.projects__column {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.projects__item {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+.btn {
+    min-height: 60px;
+    background: none;
+    cursor: pointer;
+    font-family: 'DINpro', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn__white {
+    padding: 0 60px;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn__white:hover {
+    background: white;
+    color: #344258;
+    transition: all 0.3s ease-out;
+}
+
+.btn__more {
+    border: 2px solid #344258;
+    width: 295px;
+}
+
+.btn__more:hover {
+    background: #344258;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.more__row {
+    margin-top: 83px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+
+.footer {
+    background: #0d1b2b;
+    color: white;
+}
+
+.footer__row {
+    max-width: 1138px;
+    padding-top: 34px;
+    padding-bottom: 95px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 3px solid #243448;
+}
+
+.credits {
+    margin-right: 15px;
+}
+
+.organisation, .adress {
+    font-size: 16px;
+}
+
+.organisation {
+    margin-bottom: 30px;
+}
+
+.adress {
+    margin-bottom: 45px;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts__mail {
+    font-size: 16px;
+    color: #3583c8;
+    display: grid;
+    align-items: center;
+    border-left: 2px solid #3583c8;
+}
+
+a {
+    color: #3583c8;
+    text-decoration: none;
+}
+
+.form__item {
+    width: 100%;
+    font-family: 'DINpro', sans-serif;
+    font-size: 16px;
+    color: white;
+    background: #243448;
+    padding: 20px;
+    margin-bottom: 2px;
+    outline:none;
+}
+
+.form > a {
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Adaptive */
+
+@media (max-width: 1700px) {
+    .form > a {
+        padding-left:calc(15px + (100 - 15) * ((100vw - 320px) / (1700 - 320)));
+        padding-right:calc(15px + (100 - 15) * ((100vw - 320px) / (1700 - 320)));
+        font-size: calc(5px + (16 - 5) * ((100vw - 320px) / (1700 - 320)));
+        text-align: center;
+    }
+
+    .contacts__mail {
+        padding-left: calc(5px + (30 - 5) * ((100vw - 320px) / (1700 - 320)));
+    }
+
+    .contacts__list {
+        font-size: calc(15px + (24 - 15) * ((100vw - 320px) / (1700 - 320)));
+        width:calc(120px + (280 - 120) * ((100vw - 320px) / (1700 - 320)));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .btn__white {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    .projects__row {
+        flex-direction: column;
+    }
+
+    .projects__column {
+        margin-bottom: 15px;
+    }
+
+    .btn__white {
+        padding: 0 70px;
+    }
+
+    .footer__row {
+        flex-direction: column;
+    }
+
+    .credits {
+        margin-bottom: 20px;
+    }
+
+    .form > a {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .header {
+        padding-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contacts__list {
+        font-size: 16px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .footer__row {
+        padding-bottom: 40px;
+    }
+
+    .credits {
+        text-align: center;
+    }
+
+    h2 {
+        padding-bottom: 30px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adress {
+        margin-bottom: 25px;
+    }
+
+    .contacts__list {
+        margin-bottom: 15px;
+    }
+
+    .contacts__mail {
+        padding-left: 0;
+        border-left: none;
+        display: flex;
+        flex-direction: column; 
+        text-align: center;       
+    }
+
+    .form > a {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+
+    .more__row {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
